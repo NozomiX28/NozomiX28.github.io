@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摄影盲盒价目表</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media', // 开启系统级自适应暗黑模式
+            theme: {
+                extend: {
+                    colors: {
+                        kleinBlue: '#002FA7', // 纯正克莱因蓝
+                        charcoal: '#111111',
+                        studioGray: '#F8F9FA',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"PingFang SC"', '"Hiragino Sans GB"', '"Microsoft YaHei"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 瑞士风格核心网格线 */
+        .grid-line {
+            height: 1px;
+            background-color: #111111;
+        }
+        @media (prefers-color-scheme: dark) {
+            .grid-line {
+                background-color: rgba(255, 255, 255, 0.15);
+            }
+        }
+        /* 滚动条极简优化 */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #002FA7;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-zinc-900 font-sans text-charcoal dark:text-gray-100 transition-colors duration-300 min-h-screen flex flex-col justify-between">
+
+    <div class="h-2 bg-kleinBlue w-full"></div>
+
+    <main class="flex-grow flex items-center justify-center p-4 md:p-12 lg:p-16">
+        <div class="w-full max-w-5xl bg-white dark:bg-black border border-black/10 dark:border-white/10 transition-all duration-300 rounded-none shadow-xl overflow-hidden">
+            
+            <div class="bg-studioGray dark:bg-zinc-900 border-b border-charcoal/5 dark:border-white/5 px-6 py-3 flex justify-between items-center text-xs tracking-wider">
+                <span class="font-mono font-bold text-kleinBlue flex items-center gap-2">
+                    <span class="inline-block w-2 h-2 bg-kleinBlue"></span>
+                    INTRODUCTION / PRICING
+                </span>
+                <span class="font-mono text-gray-400 dark:text-zinc-500 text-[10px]">AUTO-THEME SYSTEM</span>
+            </div>
+
+            <div class="p-6 md:p-12 lg:p-16">
+                <header class="grid grid-cols-1 md:grid-cols-12 gap-6 items-end pb-8">
+                    <div class="md:col-span-8">
+                        <p class="text-xs font-mono font-extrabold text-kleinBlue tracking-[0.2em] uppercase mb-2">01 / GPOSE SERVICE</p>
+                        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter uppercase leading-[0.95] text-charcoal dark:text-white">
+                            PHOTO<br>BOXES
+                        </h1>
+                    </div>
+                    <div class="md:col-span-4 text-left md:text-right">
+                        <div class="inline-block border-l-4 border-kleinBlue pl-4 md:border-l-0 md:pl-0 md:border-r-4 md:pr-4 text-left">
+                            <span class="text-2xl font-extrabold tracking-tight block">价目表</span>
+                            <span class="text-xs text-gray-400 dark:text-zinc-400 font-mono tracking-wider block mt-1">摄影盲盒介绍 & 收费准则</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="grid-line w-full mb-10"></div>
+
+                <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+                    <div class="lg:col-span-4 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-mono font-bold text-kleinBlue tracking-wider block mb-2">SERVICE TYPE</span>
+                            <h2 class="text-3xl font-extrabold tracking-tight mb-4 text-charcoal dark:text-white">摄影盲盒</h2>
+                            <p class="text-sm text-gray-500 dark:text-zinc-400 leading-relaxed max-w-sm">
+                                无特殊情况均为4K直出，具有一定随机性
+                            </p>
+                        </div>
+                        <div class="mt-8 lg:mt-0">
+                            <div class="inline-flex items-center gap-2 bg-studioGray dark:bg-zinc-900 py-2 px-3 text-xs font-mono font-bold">
+                                <span class="w-1.5 h-1.5 bg-kleinBlue"></span>
+                                OUTPUT: 每套大于五张
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="border-2 border-charcoal dark:border-zinc-700 p-8 flex flex-col justify-between hover:bg-kleinBlue hover:text-white hover:border-kleinBlue dark:hover:border-kleinBlue transition-all duration-300 group cursor-pointer" onclick="selectPlan('10r')">
+                            <div>
+                                <div class="flex justify-between items-start mb-6">
+                                    <span class="text-xs font-mono font-bold tracking-widest text-kleinBlue group-hover:text-white transition-colors">PLAN_A</span>
+                                    <span class="text-xs font-mono text-gray-400 dark:text-zinc-500 group-hover:text-white/60 transition-colors">01 SET</span>
+                                </div>
+                                <h3 class="text-lg font-bold mb-1">一套幻化</h3>
+                                <p class="text-xs text-gray-400 dark:text-zinc-500 group-hover:text-white/80 transition-colors">轻量体验</p>
+                            </div>
+                            <div class="mt-12 flex items-baseline gap-1">
+                                <span class="text-6xl font-black tracking-tighter leading-none">10</span>
+                                <span class="text-xl font-bold font-mono">RMB</span>
+                                <span class="text-xs text-gray-400 dark:text-zinc-500 group-hover:text-white/60 transition-colors ml-2">/ 一套</span>
+                            </div>
+                        </div>
+
+                        <div class="border-2 border-charcoal dark:border-zinc-700 p-8 flex flex-col justify-between bg-charcoal text-white dark:bg-zinc-900 hover:bg-kleinBlue hover:border-kleinBlue dark:hover:border-kleinBlue transition-all duration-300 group cursor-pointer" onclick="selectPlan('35r')">
+                            <div>
+                                <div class="flex justify-between items-start mb-6">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-xs font-mono font-bold tracking-widest text-kleinBlue group-hover:text-white transition-colors">PLAN_B</span>
+                                        <span class="bg-kleinBlue text-[9px] font-mono text-white px-1.5 py-0.5 font-bold uppercase">SALE</span>
+                                    </div>
+                                    <span class="text-xs font-mono text-gray-400 dark:text-zinc-500 group-hover:text-white/60 transition-colors">04 SETS</span>
+                                </div>
+                                <h3 class="text-lg font-bold mb-1">四套幻化套餐</h3>
+                                <p class="text-xs text-gray-400 dark:text-zinc-500 group-hover:text-white/80 transition-colors">多维呈现</p>
+                            </div>
+                            <div class="mt-12 flex items-baseline gap-1">
+                                <span class="text-6xl font-black tracking-tighter leading-none text-kleinBlue group-hover:text-white transition-colors">35</span>
+                                <span class="text-xl font-bold font-mono">RMB</span>
+                                <span class="text-xs text-gray-400 dark:text-zinc-500 group-hover:text-white/60 transition-colors ml-2">/ 四套</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="grid-line w-full mb-10"></div>
+
+                <section class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <div class="lg:col-span-4">
+                        <span class="text-xs font-mono font-bold text-kleinBlue tracking-wider block mb-2">REGULATIONS</span>
+                        <h2 class="text-3xl font-extrabold tracking-tight mb-4 text-charcoal dark:text-white">注意事项</h2>
+                        <p class="text-sm text-gray-500 dark:text-zinc-400 leading-relaxed">
+                            为了保证最终作品的品质与双方的合作效率，请在下单前仔细阅读以下条款约束。
+                        </p>
+                    </div>
+
+                    <div class="lg:col-span-8 space-y-8">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-2 border-b border-gray-100 dark:border-zinc-800/60 pb-6">
+                            <div class="md:col-span-1 text-xs font-mono font-extrabold text-kleinBlue">01</div>
+                            <div class="md:col-span-11">
+                                <h4 class="text-base font-bold mb-2">出图确认后付款</h4>
+                                <p class="text-sm text-gray-600 dark:text-zinc-300 leading-relaxed">
+                                    所有业务均在您确认无误再进行付款。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-2 border-b border-gray-100 dark:border-zinc-800/60 pb-6">
+                            <div class="md:col-span-1 text-xs font-mono font-extrabold text-kleinBlue">02</div>
+                            <div class="md:col-span-11">
+                                <h4 class="text-base font-bold mb-2">关于角色设定的指定与盲盒限制</h4>
+                                <p class="text-sm text-gray-600 dark:text-zinc-300 leading-relaxed mb-4">
+                                    请务必<strong class="font-extrabold text-charcoal dark:text-white">【事先】</strong>说明角色的性格（例如会/不会做的表情，动作等）和任何必须注意的雷区要求。但由于盲盒本身的探索性质，我不建议给出过于具象和细节的场景指定。
+                                </p>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 font-mono">
+                                    <div class="bg-green-50/40 dark:bg-green-950/10 p-4 border-l-2 border-green-600">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <span class="text-xs bg-green-600 text-white px-1.5 py-0.5 font-bold">ACCEPTABLE ✓</span>
+                                        </div>
+                                        <ul class="text-xs space-y-1.5 text-green-800 dark:text-green-400 list-disc list-inside">
+                                            <li>"想要明媚、阳光的感觉"</li>
+                                            <li>"角色是三无系，表情不要太丰富"</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-blue-50/40 dark:bg-blue-950/10 p-4 border-l-2 border-kleinBlue">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <span class="text-xs bg-kleinBlue text-white px-1.5 py-0.5 font-bold">DECLINED ✗</span>
+                                        </div>
+                                        <ul class="text-xs space-y-1.5 text-blue-800 dark:text-blue-300 list-disc list-inside">
+                                            <li>"想让角色侧坐在望海楼楼顶看日出"</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-gray-400 dark:text-zinc-500 mt-4 leading-relaxed">
+                                    *若无事先说明则默认授予我完全自由发挥的权利。出图后不接受对【摄影本人造成失误】以外的任何修改。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-2 pb-2">
+                            <div class="md:col-span-1 text-xs font-mono font-extrabold text-kleinBlue">03</div>
+                            <div class="md:col-span-11">
+                                <h4 class="text-base font-bold mb-2">关于现代日常风风格限制</h4>
+                                <p class="text-sm text-gray-600 dark:text-zinc-300 leading-relaxed">
+                                    不擅长现代日常风的拍摄（游戏内适合的场景不多）。若您确实有强烈的现代风需求，大概率会在纯色背景的摄影棚中进行拍摄。
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <footer class="mt-16 pt-8 border-t border-charcoal/10 dark:border-white/10 grid grid-cols-1 md:grid-cols-12 gap-6 text-xs font-mono">
+                    <div class="md:col-span-6">
+                        <span class="text-gray-400 dark:text-zinc-500 block uppercase tracking-widest mb-1">ARTIST ID</span>
+                        <span class="text-base font-bold text-charcoal dark:text-white">蒼焰 <span class="text-kleinBlue text-xs font-normal">@沃仙曦染</span></span>
+                    </div>
+                    <div class="md:col-span-6 md:text-right">
+                        <span class="text-gray-400 dark:text-zinc-500 block uppercase tracking-widest mb-1">CONTACT</span>
+                        <span class="text-base font-bold text-kleinBlue bg-kleinBlue/5 dark:bg-kleinBlue/10 px-2 py-1 border border-kleinBlue/20">QQ: 849743265</span>
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="toast" class="fixed bottom-6 right-6 bg-kleinBlue text-white text-xs font-mono px-4 py-3 tracking-widest border border-white/20 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none z-50">
+        PLAN SELECTED
+    </div>
+    
+    <script>
+        function selectPlan(planName) {
+            const toast = document.getElementById('toast');
+            toast.textContent = `SELECTED: [${planName.toUpperCase()}] // 期待与您的合作`;
+            toast.classList.remove('opacity-0', 'translate-y-20');
+            toast.classList.add('opacity-100', 'translate-y-0');
+            
+            setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'translate-y-20');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
